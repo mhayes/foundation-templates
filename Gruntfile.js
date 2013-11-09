@@ -7,12 +7,16 @@ module.exports = function(grunt) {
       dist: {
         options: {
           flatten: true,
-          assets: 'bower_components',
+          assets: 'dist/assets',
           layout: 'layouts/default.html'
         },
         src: 'pages/*.html',
         dest: 'dist/'
       }
+    },
+
+    bower: {
+      dist: {dest:'dist/assets'}
     },
 
     clean: ['dist/'],
@@ -25,10 +29,11 @@ module.exports = function(grunt) {
     }
   });
   
+  grunt.loadNpmTasks('grunt-bower');
   grunt.loadNpmTasks('grunt-contrib-watch');  
   grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('assemble');
 
-  grunt.registerTask('compile', ['clean', 'assemble'])
+  grunt.registerTask('compile', ['clean', 'bower', 'assemble'])
   grunt.registerTask('default', ['compile', 'watch']);
 };
