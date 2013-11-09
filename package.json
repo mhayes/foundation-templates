@@ -1,0 +1,10 @@
+{
+  "name": "foundation-templates",
+  "version": "0.0.1",
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "assemble": "~0.4.20",
+    "grunt-contrib-clean": "~0.5.0",
+    "grunt-contrib-watch": "~0.5.3"
+  }
+}

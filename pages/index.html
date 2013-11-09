@@ -1,0 +1,32 @@
+---
+name: Index
+template: false
+---
+
+<header>
+  <div class="row">
+    <div class="large-12 columns">
+      <h2 class="subheader">Templates</h2>
+    </div>
+  </div>  
+</header>
+
+<div class="row">
+  <div class="large-12 columns">
+    <ul class="large-block-grid-4">
+      {{#each pages}}
+      {{#if data.template}}
+      <li>
+        <a href="{{pagename}}">{{data.name}}</a>
+        <a data-reveal-id="{{basename pagename}}-html-modal">HTML</a>
+        <div id="{{basename pagename}}-html-modal" class="reveal-modal">
+          <h3 class="subheader">Copy to your site</h3>
+          <textarea style="height:300px;">{{page}}</textarea>
+          <a href="#" class="close-reveal-modal">&times;</a>
+        </div>
+      </li>
+      {{/if}}
+      {{/each}}
+    </ul>
+  </div>
+</div>

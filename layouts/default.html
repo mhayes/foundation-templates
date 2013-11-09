@@ -1,0 +1,27 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Foundation Template | {{name}}</title>
+    <link rel="stylesheet" href="{{assets}}/foundation/css/foundation.min.css" />
+    <style>
+    header {
+      background: #137795;
+      border-bottom:1px solid #0E566C;
+      margin-bottom:10px;
+    }
+    header h2.subheader {color: #ffffff;}
+
+    </style>
+    <script src="{{assets}}/modernizr/modernizr.js"></script>
+  </head>
+  <body>
+    {{> body}}
+    <script src="{{assets}}/jquery/jquery.min.js"></script>
+    <script src="{{assets}}/foundation/js/foundation.min.js"></script>
+    <script>
+      $(document).foundation();
+    </script>
+  </body>
+</html>
